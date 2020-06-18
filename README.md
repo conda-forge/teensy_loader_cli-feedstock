@@ -10,7 +10,6 @@ Feedstock license: BSD 3-Clause
 Summary: The Teensy Loader is available in a command line version for advanced users who want to automate programming
 
 
-
 Current build status
 ====================
 
