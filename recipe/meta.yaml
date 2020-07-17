@@ -17,9 +17,15 @@ source:
     - osx_makefile_cleanup.patch  # [osx]
     # https://github.com/PaulStoffregen/teensy_loader_cli/issues/51
     - hid_location_windows.patch  # [win]
+    # Specify soft reboot serial number
+    # https://github.com/PaulStoffregen/teensy_loader_cli/pull/57
+    - 57.patch
+    # Fail on soft reboot failure
+    # https://github.com/PaulStoffregen/teensy_loader_cli/pull/58
+    - 58.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
