@@ -5,9 +5,10 @@ Home: https://www.pjrc.com/teensy/loader_cli.html
 
 Package license: GPL-3.0-only
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The Teensy Loader is available in a command line version for advanced users who want to automate programming
+
 
 
 Current build status
