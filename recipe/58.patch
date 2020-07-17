@@ -1,0 +1,25 @@
+From 05bea963c7d9fedc9b57d3b236aa37595c42501a Mon Sep 17 00:00:00 2001
+From: Mark Harfouche <mark.harfouche@gmail.com>
+Date: Fri, 17 Jul 2020 17:41:47 -0400
+Subject: [PATCH] force failure if soft reboot fails
+
+---
+ teensy_loader_cli.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/teensy_loader_cli.c b/teensy_loader_cli.c
+index f20b9f1..689878e 100644
+--- a/teensy_loader_cli.c
++++ b/teensy_loader_cli.c
+@@ -129,9 +129,8 @@ int main(int argc, char **argv)
+ 			wait_for_device_to_appear = 1;
+ 		}
+ 		if (soft_reboot_device) {
+-			if (soft_reboot()) {
+-				printf_verbose("Soft reboot performed\n");
+-			}
++			if (!soft_reboot()) die("Unable to perform soft reboot.");
++			printf_verbose("Soft reboot performed\n");
+ 			soft_reboot_device = 0;
+ 			wait_for_device_to_appear = 1;
+ 		}
