@@ -19,10 +19,10 @@ source:
     - hid_location_windows.patch  # [win]
     # Specify soft reboot serial number
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/57
-    - 57.patch
+    - 57.patch-binary
     # Fail on soft reboot failure
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/58
-    - 58.patch
+    - 58.patch-binary
 
 build:
   number: 1
