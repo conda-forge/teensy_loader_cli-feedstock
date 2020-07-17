@@ -1,5 +1,7 @@
 # Technically not 2.1.1, but it is not version 2.1, so ...
-{% set version = "2.1.1" %}
+# 2.1.1 had osx_makefile_cleanup + hid_location_windows patch
+# 2.1.2 has 57 and 58 patch
+{% set version = "2.1.2" %}
 
 package:
   name: teensy_loader_cli
