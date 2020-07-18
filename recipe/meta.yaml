@@ -12,7 +12,7 @@ source:
   # Build off a recent master since 2019/11/09
   # upstream asked to create tags but no response.
   # https://github.com/PaulStoffregen/teensy_loader_cli/issues/13
-  git_ref: e98b5065cdb9f04aa4dde3f2e6e6e6f12dd97592
+  git_rev: e98b5065cdb9f04aa4dde3f2e6e6e6f12dd97592
   # git_rev: master
   patches:
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/52
