@@ -12,22 +12,23 @@ source:
   # Build off a recent master since 2019/11/09
   # upstream asked to create tags but no response.
   # https://github.com/PaulStoffregen/teensy_loader_cli/issues/13
-  git_rev: e98b5065cdb9f04aa4dde3f2e6e6e6f12dd97592
+  git_ref: e98b5065cdb9f04aa4dde3f2e6e6e6f12dd97592
   # git_rev: master
   patches:
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/52
     - osx_makefile_cleanup.patch  # [osx]
-    # https://github.com/PaulStoffregen/teensy_loader_cli/issues/51
-    - 59.patch
     # Specify soft reboot serial number
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/57
     - 57.patch
     # Fail on soft reboot failure
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/58
     - 58.patch
+    # Windows HID location changed
+    # https://github.com/PaulStoffregen/teensy_loader_cli/issues/51
+    - 59.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
