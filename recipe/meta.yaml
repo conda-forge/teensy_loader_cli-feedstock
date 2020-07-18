@@ -16,7 +16,7 @@ source:
   # git_rev: master
   patches:
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/52
-    - osx_makefile_cleanup.patch  # [osx]
+    - osx_makefile_cleanup.patch
     # Specify soft reboot serial number
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/57
     - 57.patch
