@@ -22,4 +22,3 @@ index f20b9f1..7fd20c1 100644
  
  HANDLE open_usb_device(int vid, int pid)
  {
-
