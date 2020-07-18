@@ -20,5 +20,5 @@ index f20b9f1..7fd20c1 100644
 +#include <hidsdi.h>
 +#include <hidclass.h>
  
- HANDLE open_usb_device(int vid, int pid, const char* serial_number)
+ HANDLE open_usb_device(int vid, int pid)
  {
