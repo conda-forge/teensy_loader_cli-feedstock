@@ -26,9 +26,11 @@ source:
     # Windows HID location changed
     # https://github.com/PaulStoffregen/teensy_loader_cli/issues/51
     - 59.patch
+    # https://github.com/PaulStoffregen/teensy_loader_cli/pull/66
+    - 66.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
