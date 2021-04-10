@@ -17,6 +17,8 @@ source:
   patches:
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/52
     - osx_makefile_cleanup.patch
+    # https://github.com/PaulStoffregen/teensy_loader_cli/pull/66
+    - 66.patch
     # Specify soft reboot serial number
     # https://github.com/PaulStoffregen/teensy_loader_cli/pull/57
     - 57.patch
@@ -26,8 +28,6 @@ source:
     # Windows HID location changed
     # https://github.com/PaulStoffregen/teensy_loader_cli/issues/51
     - 59.patch
-    # https://github.com/PaulStoffregen/teensy_loader_cli/pull/66
-    - 66.patch
 
 build:
   number: 1
