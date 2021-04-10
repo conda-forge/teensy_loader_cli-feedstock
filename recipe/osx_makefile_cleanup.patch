@@ -1,13 +1,23 @@
+From 2cacc747654ec8b9a496dbc20e41d454b5d1c236 Mon Sep 17 00:00:00 2001
+From: Mark Harfouche <mark.harfouche@gmail.com>
+Date: Sat, 9 Nov 2019 16:11:44 -0500
+Subject: [PATCH] use ldflags on OSX
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
 diff --git a/Makefile b/Makefile
-index 05f7ca5..8682011 100644
+index 2d1bda1..c63a9f7 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -27,7 +27,7 @@ ifeq ($(USE_LIBUSB), YES)
  CC ?= gcc
  CFLAGS ?= -O2 -Wall
  teensy_loader_cli: teensy_loader_cli.c
--       $(CC) $(CFLAGS) -s -DUSE_LIBUSB -DMACOSX -o teensy_loader_cli teensy_loader_cli.c -lusb -I /usr/local/include -L/usr/local/lib
-+       $(CC) $(CFLAGS) -s -DUSE_LIBUSB -DMACOSX -o teensy_loader_cli teensy_loader_cli.c -lusb $(LDFLAGS)
-
+-	$(CC) $(CFLAGS) -s -DUSE_LIBUSB -DMACOSX -o teensy_loader_cli teensy_loader_cli.c -lusb -I /usr/local/include -L/usr/local/lib
++	$(CC) $(CFLAGS) -s -DUSE_LIBUSB -DMACOSX -o teensy_loader_cli teensy_loader_cli.c -lusb $(LDFLAGS)
+ 	 
  else
  CC ?= gcc
+
