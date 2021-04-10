@@ -1,4 +1,4 @@
-From 28767056dfde06fb5307221e445a7023ebf52bab Mon Sep 17 00:00:00 2001
+From 93781a0dd9f7060b7bb5efaac99c977bbf768711 Mon Sep 17 00:00:00 2001
 From: Mark Harfouche <mark.harfouche@gmail.com>
 Date: Fri, 17 Jul 2020 17:34:24 -0400
 Subject: [PATCH] Enable the user to specify the serial number
@@ -8,13 +8,13 @@ Subject: [PATCH] Enable the user to specify the serial number
  1 file changed, 40 insertions(+), 6 deletions(-)
 
 diff --git a/teensy_loader_cli.c b/teensy_loader_cli.c
-index f20b9f1..ac68a60 100644
+index 6e78f1c..5962446 100644
 --- a/teensy_loader_cli.c
 +++ b/teensy_loader_cli.c
 @@ -41,6 +41,7 @@ void usage(const char *err)
  		"\t-w : Wait for device to appear\n"
  		"\t-r : Use hard reboot if device not online\n"
- 		"\t-s : Use soft reboot if device not online (Teensy3.x only)\n"
+ 		"\t-s : Use soft reboot if device not online (Teensy 3.x & 4.x)\n"
 +		"\t--serial-number=SERIAL_NUMBER : Serial number to use in conjunction with soft reboot (UNIX only).\n"
  		"\t-n : No reboot after programming\n"
  		"\t-b : Boot only, do not program\n"
@@ -105,7 +105,16 @@ index f20b9f1..ac68a60 100644
  	if (!serial_handle) {
  		char *error = usb_strerror();
  		printf("Error opening USB device: %s\n", error);
-@@ -1149,7 +1181,6 @@ void parse_options(int argc, char **argv)
+@@ -373,6 +403,8 @@ int soft_reboot(void)
+ #include <ddk/hidsdi.h>
+ #include <ddk/hidclass.h>
+ 
++// Serial number checking not implemented on Windows
++// https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/hidsdi/nf-hidsdi-hidd_getserialnumberstring
+ HANDLE open_usb_device(int vid, int pid)
+ {
+ 	GUID guid;
+@@ -1150,7 +1182,6 @@ void parse_options(int argc, char **argv)
  		if(strncmp(arg, "-mmcu=", 6) == 0) {
  			read_mcu(strchr(arg, '=') + 1);
  		}
@@ -113,7 +122,7 @@ index f20b9f1..ac68a60 100644
  		else if(arg[0] == '-') {
  			if(arg[1] == '-') {
  				char *name = &arg[2];
-@@ -1167,6 +1198,9 @@ void parse_options(int argc, char **argv)
+@@ -1168,6 +1199,9 @@ void parse_options(int argc, char **argv)
  				if(strcasecmp(name, "help") == 0) usage(NULL);
  				else if(strcasecmp(name, "mcu") == 0) read_mcu(val);
  				else if(strcasecmp(name, "list-mcus") == 0) list_mcus();

@@ -1,4 +1,4 @@
-From a4dc69ecf8e79523b490100aed7850bbbf4cc3eb Mon Sep 17 00:00:00 2001
+From aed28351f4ce05b557d90b5257ac7ca651bcb11e Mon Sep 17 00:00:00 2001
 From: Mark Harfouche <mark.harfouche@gmail.com>
 Date: Fri, 17 Jul 2020 20:06:33 -0400
 Subject: [PATCH] Update location of hid headers on windows
@@ -8,7 +8,7 @@ Subject: [PATCH] Update location of hid headers on windows
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/teensy_loader_cli.c b/teensy_loader_cli.c
-index f20b9f1..7fd20c1 100644
+index 6e78f1c..ec0bd30 100644
 --- a/teensy_loader_cli.c
 +++ b/teensy_loader_cli.c
 @@ -370,8 +370,8 @@ int soft_reboot(void)
