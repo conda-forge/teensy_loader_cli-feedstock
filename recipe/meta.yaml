@@ -35,16 +35,14 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}        # [not win]
-    - {{ stdlib("c") }}          # [not win]
+    - {{ stdlib('c') }}          # [not win]
     - {{ compiler('m2w64_c') }}  # [win]
-    - {{ stdlib("m2w64_c") }}    # [win]
-    - make      # [unix]
-    - m2-make   # [win]
-    - m2-patch  # [win]
+    - {{ stdlib('m2w64_c') }}    # [win]
+    - make                       # [unix]
+    - m2-make                    # [win]
+    - m2-patch                   # [win]
   host:
-    - libusb-compat  # [linux]
-  run:
-    - libusb-compat  # [linux]
+    - libusb-compat              # [linux]
 
 test:
   commands:
