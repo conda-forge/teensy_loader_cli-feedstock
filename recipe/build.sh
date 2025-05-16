@@ -1,5 +1,7 @@
+set -ex
 SHORT_OS_STR=$(uname -s)
-if [ "${SHORT_OS_STR:0:5}" == "Linux" ]; then
+
+if [[ "${target_platform}" == linux-* ]]; then
   make OS=LINUX
 else
   make OS=MACOSX
