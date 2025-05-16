@@ -2,10 +2,8 @@
 setlocal enabledelayedexpansion
 
 make OS=WINDOWS CC=gcc
-if errorlevel 1 exit 1
+if %ERRORLEVEL% neq 0 exit %ERRORLEVEL%
 
 mkdir %PREFIX%\bin
 copy teensy_loader_cli.exe  %PREFIX%\bin\
-if errorlevel 1 exit 1
-
-exit 0
+if %ERRORLEVEL% neq 0 exit %ERRORLEVEL%
