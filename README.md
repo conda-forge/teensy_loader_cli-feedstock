@@ -81,7 +81,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-teensy_loader_cli-green.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/teensy_loader_cli.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/teensy_loader_cli.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/teensy_loader_cli.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-teensy__loader__cli-green.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/teensy_loader_cli.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/teensy_loader_cli.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/teensy_loader_cli.svg)](https://anaconda.org/conda-forge/teensy_loader_cli) |
 
 Installing teensy_loader_cli
 ============================
