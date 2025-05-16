@@ -1,7 +1,7 @@
 @echo ON
 setlocal enabledelayedexpansion
 
-make OS=WINDOWS
+make OS=WINDOWS CC=gcc
 if errorlevel 1 exit 1
 
 mkdir %PREFIX%\bin
