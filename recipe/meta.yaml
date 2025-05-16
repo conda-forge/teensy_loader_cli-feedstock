@@ -30,8 +30,6 @@ requirements:
     - {{ compiler('m2w64_c') }}  # [win]
     - {{ stdlib('m2w64_c') }}    # [win]
     - make                       # [unix]
-    - m2-make                    # [win]
-    - m2-patch                   # [win]
   host:
     - libusb-compat              # [linux]
 
