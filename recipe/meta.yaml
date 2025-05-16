@@ -25,10 +25,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ stdlib('c') }}          # [not win]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ stdlib('m2w64_c') }}    # [win]
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - make                       # [unix]
     - m2-make                    # [win]
     - m2-patch                   # [win]
@@ -39,7 +37,7 @@ test:
   commands:
     # Command seems to return non-zero even though it lists things successfully
     - teensy_loader_cli --list-mcus | grep Supported         # [unix]
-    - teensy_loader_cli.exe --list-mcus | findstr Supported  # [win]
+    - teensy_loader_cli --list-mcus | findstr Supported      # [win]
 
 about:
   home: https://www.pjrc.com/teensy/loader_cli.html
